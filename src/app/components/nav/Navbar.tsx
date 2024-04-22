@@ -12,7 +12,6 @@ export const Navbar = () => {
     <AppBar
       component="nav"
       sx={{
-        boxShadow: { xs: "", sm: "none" },
         backgroundImage: {
           xs: "",
           sm: "linear-gradient(180deg, #ffffff 51%, rgba(255, 255, 255, 0) 99%)",

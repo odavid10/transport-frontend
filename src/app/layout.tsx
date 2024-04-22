@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
+// material-ui
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
-import { Box, CssBaseline, ThemeProvider, Toolbar } from "@mui/material";
+import {
+  Box,
+  Container,
+  CssBaseline,
+  ThemeProvider,
+  Toolbar,
+} from "@mui/material";
 
+// project imports
 import { theme } from "./theme";
-import "./globals.css";
 import { Footer, Navbar } from "./components";
-
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Transport App",
@@ -22,14 +28,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Navbar />
             <Box component="main">
               <Toolbar />
-              {children}
+              <main className={styles.main}>
+                <Container
+                  maxWidth="xl"
+                  sx={{
+                    minHeight: "80vh",
+                    paddingX: 0,
+                    backgroundColor: "#F5E6FC",
+                    borderRadius: "10px",
+                    paddingY: 3,
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  {children}
+                </Container>
+              </main>
             </Box>
             <Footer />
           </ThemeProvider>

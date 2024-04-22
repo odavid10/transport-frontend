@@ -2,7 +2,7 @@
 import { Box, Divider, Typography } from "@mui/material";
 
 // project imports
-import { APP_VERSION } from "../utils/constants";
+import { APP_VERSION } from "../utils";
 
 export const Footer = () => {
   return (
