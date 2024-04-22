@@ -13,7 +13,7 @@ export default function DetailRoute({ params }: { params: { id: string } }) {
   return (
     <>
       <Typography variant="h3" textAlign={"center"}>
-        Detail Route Page {params.id.replace(/.(?=.{5})/g, ".")}
+        {!loading && `Ruta ${route?.name || "N/A"}`}
       </Typography>
       <Box
         mt={5}
