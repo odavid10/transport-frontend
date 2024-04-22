@@ -52,9 +52,11 @@ export const Navbar = () => {
               justifyContent: "space-between",
             }}
           >
-            <Typography variant="h5" color="initial">
-              Transport App
-            </Typography>
+            <Link href={"/"}>
+              <Typography variant="h5" color="initial">
+                Transport App
+              </Typography>
+            </Link>
             <NavSidebar />
           </Box>
         </Toolbar>
