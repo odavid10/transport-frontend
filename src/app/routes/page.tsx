@@ -13,7 +13,7 @@ export default function Routes() {
   return (
     <>
       <Typography variant="h3" textAlign={"center"}>
-        Routes Page
+        Nuestras rutas
       </Typography>
       <Grid container spacing={2} mt={3}>
         {loading ? (
