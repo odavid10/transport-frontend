@@ -20,5 +20,5 @@ export interface Route {
 }
 
 export interface RouteProps {
-  route: Route;
+  route: Route | any;
 }
