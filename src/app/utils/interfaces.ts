@@ -18,3 +18,7 @@ export interface Route {
   arrivalTime: string;
   id: string;
 }
+
+export interface RouteProps {
+  route: Route;
+}

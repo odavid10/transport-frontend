@@ -5,15 +5,11 @@ import Image from "next/image";
 import { Card, CardActionArea, CardContent, Typography } from "@mui/material";
 
 // project imports
-import { Route } from "@/app/utils";
+import { RouteProps } from "@/app/utils";
 import Logo from "../../../../public/img/placeholder-img.webp";
 import classes from "./routeCard.module.css";
 
-interface Props {
-  route: Route;
-}
-
-export const RouteCard = ({ route }: Props) => {
+export const RouteCard = ({ route }: RouteProps) => {
   return (
     <Link href={`/routes/${route.id}`} passHref>
       <Card className={classes["route-card"]}>
