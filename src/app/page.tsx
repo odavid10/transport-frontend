@@ -20,7 +20,10 @@ export default function Home() {
 
   return (
     <>
-      <Typography variant="h2" textAlign={"center"}>
+      <Typography
+        variant={useMediaQuery(theme.breakpoints.down("md")) ? "h3" : "h2"}
+        textAlign={"center"}
+      >
         Bienvenido
       </Typography>
       <Grid
